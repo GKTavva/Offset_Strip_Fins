@@ -101,7 +101,8 @@
             <li>Reynolds range: <strong>300 – 6000</strong>. Laminar &le;1500; transitional between 1500–2000 (treated as a linear interpolation between laminar and turblent); turbulent &ge;2000.</li>
             <li>Prandtl number applicability: <strong>0.5 – 15</strong> (gases & many liquids).</li>
             <li>Surface roughness neglected; ideal metal fins assumed (aluminum in study).</li>
-            <li>Formulas below are empirical regressions derived from CFD — expect typical errors on order of a few % (see paper for MAPE).</li>
+            <li>Formulas below are empirical regressions derived using 1053 CFD data points. Hence, expect typical errors on order of a few % (see [1] for MAPE).</li>
+            <li>The ranges of fin height, length, thickness, and spacing for which the correlation is valid are detailed in the referenced study [1].</li>
           </ul>
         </div>
 
@@ -140,13 +141,13 @@
 
     <footer>
       <div class="small" style="margin-top:12px">
-        Disclaimer: These predictions are from numerical correlations (CFD-based). See paper for validation, error bounds, and detailed assumptions.
+        Disclaimer: These predictions are from numerical correlations (CFD-based). See [1] for validation, error bounds, and detailed assumptions.
       </div>
     </footer>
   </div>
 
 <script>
-/* Correlation implementations (from the paper). 
+/* Correlation implementations. 
    Input: Re, t/l, s/b, t/s
    We compute laminar and turbulent forms and linearly interpolate in transition.
 */
@@ -324,3 +325,4 @@ function resetExample(){
 </script>
 </body>
 </html>
+
